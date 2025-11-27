@@ -46,7 +46,8 @@ export const CampaignBanner = () => {
 
         {/* Right CTA */}
         <div className="flex-shrink-0 flex gap-3 w-full md:w-auto">
-            <Button className="w-full md:w-auto bg-white text-jaco-primary hover:bg-gray-100 font-bold shadow-xl border-none">
+            {/* Using !important classes to ensure the white background and primary text override component defaults */}
+            <Button className="w-full md:w-auto !bg-white !text-jaco-primary hover:!bg-gray-100 font-bold shadow-xl border-none">
                 Watch Event
             </Button>
             <Button variant="outline" className="w-full md:w-auto border-white/20 text-white hover:bg-white/10 hover:text-white">

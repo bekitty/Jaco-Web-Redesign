@@ -1,8 +1,8 @@
 
 import { Stream, Category, User } from './types';
 
-// Helper to get reliable Unsplash images
-const getImg = (id: string, w = 800, h = 450) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&h=${h}&q=80`;
+// Helper to get reliable Unsplash images with ixlib param
+const getImg = (id: string, w = 800, h = 450) => `https://images.unsplash.com/photo-${id}?ixlib=rb-4.0.3&auto=format&fit=crop&w=${w}&h=${h}&q=80`;
 
 export const MOCK_USERS: User[] = [
   { id: 'u1', username: 'JacoGamer', avatarUrl: getImg('1566492031773-4fbc7176cb47', 100, 100), isLive: true, category: 'Gaming' },
@@ -14,12 +14,12 @@ export const MOCK_USERS: User[] = [
 ];
 
 export const MOCK_CATEGORIES: Category[] = [
-  { id: 'c1', name: 'Just Chatting', imageUrl: getImg('1529156069898-49953e39b3ac', 300, 400), totalViewers: 15400, tags: ['IRL', 'Talk'] }, // Friends laughing
-  { id: 'c2', name: 'Gaming', imageUrl: getImg('1542751371-adc38448a05e', 300, 400), totalViewers: 52000, tags: ['FPS', 'RPG'] }, // Esports arena
-  { id: 'c3', name: 'Music', imageUrl: getImg('1514525253440-b393452e3383', 300, 400), totalViewers: 8900, tags: ['Live', 'Performance'] }, // DJ
-  { id: 'c4', name: 'Art', imageUrl: getImg('1513364776144-60967b0f800f', 300, 400), totalViewers: 3200, tags: ['Creative', 'Drawing'] }, // Painting
-  { id: 'c5', name: 'Sports', imageUrl: getImg('1461896182550-69c534524046', 300, 400), totalViewers: 12500, tags: ['Football', 'Live'] }, // Soccer
-  { id: 'c6', name: 'Tech & Dev', imageUrl: getImg('1517694712202-14dd9538aa97', 300, 400), totalViewers: 4500, tags: ['Coding', 'Gadgets'] }, // Coding
+  { id: 'c1', name: 'Just Chatting', imageUrl: getImg('1529156069898-49953e39b3ac', 300, 400), totalViewers: 15400, tags: ['IRL', 'Talk'] },
+  { id: 'c2', name: 'Gaming', imageUrl: getImg('1542751371-adc38448a05e', 300, 400), totalViewers: 52000, tags: ['FPS', 'RPG'] },
+  { id: 'c3', name: 'Music', imageUrl: getImg('1511671782779-c97d3d27a1d4', 300, 400), totalViewers: 8900, tags: ['Live', 'Performance'] },
+  { id: 'c4', name: 'Art', imageUrl: getImg('1513364776144-60967b0f800f', 300, 400), totalViewers: 3200, tags: ['Creative', 'Drawing'] },
+  { id: 'c5', name: 'Sports', imageUrl: getImg('1518611012118-696072aa8795', 300, 400), totalViewers: 12500, tags: ['Football', 'Live'] },
+  { id: 'c6', name: 'Tech & Dev', imageUrl: getImg('1517694712202-14dd9538aa97', 300, 400), totalViewers: 4500, tags: ['Coding', 'Gadgets'] },
 ];
 
 export const MOCK_STREAMS: Stream[] = [
@@ -36,7 +36,7 @@ export const MOCK_STREAMS: Stream[] = [
   {
     id: 's2',
     title: 'Chill vibes & talking with chat 💬',
-    thumbnailUrl: getImg('1527335480060-9832764b8849'), // People talking
+    thumbnailUrl: getImg('1511632765486-a01980e01a18'), // People talking
     viewerCount: 843,
     user: MOCK_USERS[1],
     category: 'IRL',

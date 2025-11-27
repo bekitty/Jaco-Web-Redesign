@@ -8,13 +8,17 @@ import { MOCK_STREAMS, MOCK_CATEGORIES } from '../constants';
 import { ChevronRight, Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+// Helper to match the one in constants but local for quick usage if needed, or we could export it. 
+// For now, hardcoding the reliable IDs is safer than importing private helpers.
+const getImg = (id: string, w = 400, h = 225) => `https://images.unsplash.com/photo-${id}?ixlib=rb-4.0.3&auto=format&fit=crop&w=${w}&h=${h}&q=80`;
+
 export const Home = () => {
   // Use a subset of mock streams for clips, but modify them to look like clips
   const clipThumbnails = [
-    'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=400&h=225&q=80',
-    'https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=400&h=225&q=80',
-    'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=400&h=225&q=80',
-    'https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?auto=format&fit=crop&w=400&h=225&q=80'
+    getImg('1542751371-adc38448a05e'),
+    getImg('1511512578047-dfb367046420'),
+    getImg('1493711662062-fa541adb3fc8'),
+    getImg('1530893609608-32a9af3aa95c')
   ];
 
   return (
